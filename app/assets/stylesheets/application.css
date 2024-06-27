@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+.background {
+  background-image: url('/assets/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+.btn-outline-light {
+  background-image: url('/assets/block.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.coin {
+  width: 50px;
+  height: 50px;
+  background-image: url('/assets/coin.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.star {
+  width: 100px;
+  height: 100px;
+  background-image: url('/assets/star.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.text-yellow {
+  color: rgb(255, 255, 141) !important;
+}
+.text-red {
+  color: rgb(242, 81, 60) !important;
+}
+.text-green {
+  color: rgb(174, 255, 164) !important;
+}
+.goomba {
+  width: 40px;
+  height: 40px;
+  background-image: url('/assets/goomba.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  bottom: 98px;
+  left: 0;
+  animation: goombaAnimation 10s linear infinite alternate;
+}
+
+@keyframes goombaAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw - 20px));
+  }
+}

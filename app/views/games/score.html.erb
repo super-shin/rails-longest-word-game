@@ -1,15 +1,24 @@
 <div class="container text-center">
   <div class="row justify-content-center align-items-center vh-100">
-    <div class="col">
+    <div class="col text-center">
+      <div class="star mx-auto"></div>
       <h1>Result</h1>
       <% if !@passed %>
-        <p>Sorry but <strong><%= @word %></strong> can't be built out of <%= @picked.join(', ') %>.</p>
+        <p>Sorry but <strong class="text-red"><%= @word %></strong> can't be built out of <%= @picked.join(', ') %>.</p>
       <% elsif !@data['found'] %>
-          <p>Sorry but <strong><%= @word %></strong> does not seem to be a valid English word...</p>
+          <p>Sorry but <strong class="text-yellow"><%= @word %></strong> does not seem to be a valid English word...</p>
       <% else %>
-          <p>Congratulations! <strong><%= @word %></strong> is a valid English word!</p>
+          <p>Congratulations! <strong class="text-green"><%= @word %></strong> is a valid English word!</p>
+          <div class="row align-items-center justify-content-center">
+            <div class="col-auto">
+              <div class="coin"></div>
+            </div>
+            <div class="col-auto">
+              <h1 class="text-warning"><%= @points %> points</h1>
+            </div>
+          </div>
       <% end %>
-      <%= link_to 'Play again', new_path %>
+      <%= link_to 'Play again', new_path, class: "btn btn-primary mt-3" %>
     </div>
   </div>
 </div>
